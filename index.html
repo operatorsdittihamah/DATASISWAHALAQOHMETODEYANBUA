@@ -92,6 +92,12 @@ div.dataTables_wrapper {
     font-size: 12px;
 }
 
+#statGuru .stat-table {
+    max-height: 200px;
+    overflow-y: auto;
+}
+    
+
 .stat-table table {
     width: 100%;
     border-collapse: collapse;
@@ -211,13 +217,24 @@ div.dataTables_wrapper {
 
 
 
+@media (max-width: 768px) {
+    #statGuru .stat-table {
+        max-height: 150px;
+    }
+}
 
 
 
 
 
+.stat {
+    font-size: 12px;
+    padding: 8px;
+}
 
-
+.stat-table {
+    font-size: 11px;
+}
 
 </style>
 </head>
@@ -288,7 +305,7 @@ new DataTable('#pizzaPrice', {
         }
     },
     scrollX: true,
-    scrollY: "500px",
+    scrollY: "70vh",
     fixedHeader: true,
     pageLength: 1000,
     paging: false,
